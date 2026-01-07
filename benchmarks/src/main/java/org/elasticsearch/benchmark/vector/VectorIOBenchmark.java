@@ -58,7 +58,7 @@ public class VectorIOBenchmark {
         LogConfigurator.configureESLogging(); // native access requires logging to be initialized
     }
 
-    private static final String TEST_DIR = "/Users/jimczi/test";
+    private static final String TEST_DIR = "/home/esbench/.rally/benchmarks/races/test/index";
 
     private final Random random = new Random();
     private Directory dir;
@@ -67,7 +67,7 @@ public class VectorIOBenchmark {
 
     private ExecutorService executor;
 
-    @Param({ "20000000" })
+    @Param({ "200000000" })
     private int numVectors;
 
     @Param({ "1024" })
@@ -76,7 +76,7 @@ public class VectorIOBenchmark {
     @Param({ "100" })
     private int numVectorPerThread;
 
-    @Param({ "8" })
+    @Param({ "32" })
     private int numThreads;
 
     @Param({ "true", "false" })
